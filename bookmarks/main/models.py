@@ -12,7 +12,7 @@ class Tag(models.Model):
 class Link(models.Model):
     title = models.CharField(max_length=128, unique=True)
     url = models.URLField()
-    # Mant to many foreign key
+    # Many to many foreign key
     tags = models.ManyToManyField(Tag)
 
     def __unicode__(self):
